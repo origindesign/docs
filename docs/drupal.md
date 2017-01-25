@@ -21,4 +21,4 @@ Note about composer
 
 ## Hosting
 
-Talk about Panthone
+Talk about Pantheon
