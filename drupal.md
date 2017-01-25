@@ -1,23 +1,22 @@
-Drupal & Tools
----------------
+# Drupal & Tools
 
-# Architecture
+## Architecture
 
 Note about root directory and file architecture
 
-# Git
+## Git
 
 Not about what to ignore in git repo
 
-# Drush
+## Drush
 
 Note about Drush
 
-# Composer
+## Composer
 
 Note about composer
 
-# Hosting
+## Hosting
 
 Talk about Panthone
 
