@@ -1,6 +1,7 @@
 # Kalabox Setup
 
-## How to make Kalabox reading web directory
+How to make Kalabox reading web directory
+-------
 
 - Pull the Drupal site you want to run on Kalabox from Pantheon
 - Run the Site and in bash, type:
