@@ -50,6 +50,7 @@ Password: drupal
 host: mariadb
 port: 3306
 ```
+- After the installation, enter the site information and you should get your fresh Drupal 8 Site.
 
 ### 3. Architecture
 
