@@ -88,7 +88,7 @@ webroot/
     └── docker-compose.yml
 </pre>
 
-### d. Stoping and Removing containers
+### d. Stopping and Removing containers
 
 IMPORTANT: Do not use `docker-compose down` command because it will purge MariaDB volume. Instead use `docker-compose stop`. If you restart Docker you WILL NOT lose your MariaDB data. 
 
