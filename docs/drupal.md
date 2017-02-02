@@ -46,37 +46,37 @@ Navigate to <http://localhost:8000> and you should see the Drupal Installation p
 
 ```
 webroot/
-├── origindrop/
-│   ├── site/
-|   |   ├── drush/
-|   |   |   └── ...
-|   |   ├── scripts/
-|   |   |   └── ...
-|   |   ├── vendor/
-|   |   |   └── ...
-|   |   ├── web/
-│   |   |   ├── core/
-│   |   |   ├── modules/
-│   |   |   ├── profiles/
-│   |   |   ├── sites/
-│   |   |   ├── themes/
-│   |   |   ├── .htaccess
-│   |   |   ├── autoload.php
-│   |   |   ├── index.php
-│   |   |   ├── robots.txt
-│   |   |   ├── update.php
-│   |   |   ├── web.config
-|   |   |   └── ...
-│   |   ├── .gitignore
-│   |   ├── .travis.yml
-│   |   ├── composer.json
-│   |   ├── composer.lock
-│   |   ├── LICENCE
-│   |   ├── phpunit.xml.dist
-│   |   └── README.md
-│   ├── docker-runtime
-|   |   └── ...
-│   └── docker-compose.yml
+└── origindrop/
+    ├── site/
+    |   ├── drush/
+    |   |   └── ...
+    |   ├── scripts/
+    |   |   └── ...
+    |   ├── vendor/
+    |   |   └── ...
+    |   ├── web/
+    |   |   ├── core/
+    |   |   ├── modules/
+    |   |   ├── profiles/
+    |   |   ├── sites/
+    |   |   ├── themes/
+    |   |   ├── .htaccess
+    |   |   ├── autoload.php
+    |   |   ├── index.php
+    |   |   ├── robots.txt
+    |   |   ├── update.php
+    |   |   ├── web.config
+    |   |   └── ...
+    |   ├── .gitignore
+    |   ├── .travis.yml
+    |   ├── composer.json
+    |   ├── composer.lock
+    |   ├── LICENCE
+    |   ├── phpunit.xml.dist
+    |   └── README.md
+    ├── docker-runtime
+    |   └── ...
+    └── docker-compose.yml
 ```
 
 Note about root directory and file architecture
