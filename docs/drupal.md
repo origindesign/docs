@@ -14,7 +14,7 @@ This setup is done on windows, the main projects directory is as close as the C 
 
 ### 1. Setting up docker containers
 
-The following command will:
+The following commands will:
 - Navigate to the webroot directory
 - Download the docker setup from Origin Docker repository into your new project directory.
 - Install docker containers locally (a LEMP stack working with Nginx, Php 7, MariaDB, PhpMyAdmin and mailhog)
@@ -28,7 +28,19 @@ docker-compose ps
 ```
 This should list all the Docker Container running. Make sure their states are all up.
 
-## Architecture
+### 2. Installing Drupal
+
+The following commands will:
+- Connect to the php docker container using ssh
+- Install Drupal 8 into webroot/origindrop/site/ folder, using composer from the [Drupal Composer project](https://github.com/drupal-composer/drupal-project)
+*Note that the PHP container has composer and drush pre-installed*
+```shell
+docker-compose exec --user 82 php sh
+composer create-project drupal-composer/drupal-project:8.x-dev /var/www/html --stability dev --no-interaction
+```
+Navigate to [http://localhost:8000/] and you should see the Drupal Installation page
+
+### 3. Architecture
 
 Note about root directory and file architecture
 
@@ -47,3 +59,11 @@ Note about composer
 ## Hosting
 
 Talk about Pantheon
+
+## Troubleshooting
+- If you use Mintty as a terminal emulator for Cygwin, you may have some issues when trying to ssh into docker containers. Prefered solution it to use default cmd for Cygwin or git bash if you prefer not to use Cygwin. See the discusion (here)[https://github.com/docker/docker/pull/22956]
+
+## References
+- Based on (docker4drupal)[https://github.com/Wodby/docker4drupal]
+
+
