@@ -8,19 +8,16 @@ This covers Drupal 8 and development tools related to it.
 - Docker
 - Docker Compose
 
-## Setting Up Drupal
+## Setting Up Drupal on Docker
 
-##### 1. Navigate to your folder where you store all your projects
-```shell
-cd .../projects
-composer create-project drupal-composer/drupal-project:8.x-dev my-site --stability dev --no-interaction
-```
-This will create a drupal site organized as per [drupal-project](https://github.com/drupal-composer/drupal-project) in the projects/my-site folder.
+This setup is done on windows, the main projects directory is as close as the C folder to avoid path length limit to 260 character on Windows. In the following steps, the projects folder is C:\webroot\ and the project name is called "Origin Drop".
 
-##### 2. Download the Docker setup from Origin Design Github account and store it into your project
+##### 1. Setting up docker containers
+
+Navigate to the webroot directory and download the docker setup from Origin Docker repository into your new project directory.
 ```shell
-cd my-site
-curl -o docker-compose.yml https://raw.githubusercontent.com/origindesign/origin-docker/master/docker-compose.yml
+cd /webroot
+git clone git@github.com:origindesign/origin-docker.git origindrop
 ```
 
 ## Architecture
