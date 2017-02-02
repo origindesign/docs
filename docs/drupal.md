@@ -2,6 +2,12 @@
 
 This covers Drupal 8 and development tools related to it.
 
+## Requirements
+- Composer
+- Git
+- Docker
+- Docker Compose
+
 ## Setting Up Drupal
 
 In your projects folder:
