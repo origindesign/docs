@@ -53,8 +53,7 @@ port: 3306
 - After the installation, enter the site information and you should get your fresh Drupal 8 Site.
 
 ### c. Architecture
-
-```
+<pre>
 webroot/
 └── origindrop/
     ├── site/
@@ -87,7 +86,7 @@ webroot/
     ├── docker-runtime
     |   └── ...
     └── docker-compose.yml
-```
+</pre>
 
 ## 2. Using composer to manage modules
 
