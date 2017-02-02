@@ -2,6 +2,15 @@
 
 This covers Drupal 8 and development tools related to it.
 
+## Setting Up Drupal
+
+In your projects folder:
+```shell
+mkdir my-site
+cd my-site
+git clone https://github.com/drupal-composer/drupal-project.git .
+```
+
 
 ## Architecture
 
