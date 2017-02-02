@@ -10,7 +10,7 @@ This covers Drupal 8 and development tools related to it.
 
 ## Setting Up Drupal on Docker
 
-This setup is done on windows, the main projects directory is as close as the C folder to avoid path length limit to 260 character on Windows. In the following steps, the projects folder is C:\webroot\ and the project name is called "Origin Drop".
+This setup is done on windows, the main projects directory is as close as the C folder to avoid path length limit to 260 characters on Windows. In the following steps, the projects folder is C:\webroot\ and the project name is called "Origin Drop".
 
 ### 1. Setting up docker containers
 
@@ -40,7 +40,16 @@ The following commands will:
 docker-compose exec --user 82 php sh
 composer create-project drupal-composer/drupal-project:8.x-dev /var/www/html --stability dev --no-interaction
 ```
-Navigate to <http://localhost:8000> and you should see the Drupal Installation page
+- Navigate to <http://localhost:8000> and you should see the Drupal Installation page
+- Navigate to <http://localhost:8001> and you should see PhpMyAdmin interface with an empty drupal database
+- From the install page, follow the classic Drupal installation step using the following credentials:
+```
+Database: drupal
+Username: drupal
+Password: drupal
+host: mariadb
+port: 3306
+```
 
 ### 3. Architecture
 
