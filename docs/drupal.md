@@ -14,8 +14,12 @@ In your projects folder:
 ```shell
 mkdir my-site
 cd my-site
-git clone https://github.com/drupal-composer/drupal-project.git .
+git clone https://github.com/drupal-composer/drupal-project.git
+mv drupal-project/* .
+rm -r drupal-project -y
 ```
+
+This will grab a composer template from [drupal-project](https://github.com/drupal-composer/drupal-project), install it into drupal-project folder, moving the necessary files into your my-site folder and delete the rest. 
 
 
 ## Architecture
