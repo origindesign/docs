@@ -44,7 +44,7 @@ Navigate to <http://localhost:8000> and you should see the Drupal Installation p
 
 ### 3. Architecture
 
-```shell
+```
 webroot/
 ├── origindrop/
 │   ├── site/
