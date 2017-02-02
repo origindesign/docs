@@ -105,9 +105,9 @@ Note about Drush
 Note about Pantheon
 
 ## Troubleshooting
-- If you use Mintty as a terminal emulator for Cygwin, you may have some issues when trying to ssh into docker containers. Prefered solution it to use default cmd for Cygwin or git bash if you prefer not to use Cygwin. See the discusion (here)[https://github.com/docker/docker/pull/22956]
+- If you use Mintty as a terminal emulator for Cygwin, you may have some issues when trying to ssh into docker containers. Prefered solution it to use default cmd for Cygwin or git bash if you prefer not to use Cygwin. See the discusion [here](https://github.com/docker/docker/pull/22956)
 
 ## References
-- Based on (docker4drupal)[https://github.com/Wodby/docker4drupal]
+- Based on [docker4drupal](https://github.com/Wodby/docker4drupal)
 
 
