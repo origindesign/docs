@@ -8,11 +8,11 @@ This covers Drupal 8 and development tools related to it.
 - Docker
 - Docker Compose
 
-## Setting Up Drupal on Docker
+## 1. Setting Up Drupal on Docker
 
 This setup is done on windows, the main projects directory is as close as the C folder to avoid path length limit to 260 characters on Windows. In the following steps, the projects folder is C:\webroot\ and the project name is called "Origin Drop".
 
-### 1. Setting up docker containers
+### a. Setting up docker containers
 
 The following commands will:
 - Navigate to the webroot directory
@@ -28,7 +28,7 @@ docker-compose ps
 ```
 This should list all the Docker Container running. Make sure their states are all up.
 
-### 2. Installing Drupal
+### b. Installing Drupal
 
 The following commands will:
 - Connect to the php docker container using ssh
@@ -52,7 +52,7 @@ port: 3306
 ```
 - After the installation, enter the site information and you should get your fresh Drupal 8 Site.
 
-### 3. Architecture
+### c. Architecture
 
 ```
 webroot/
@@ -89,23 +89,17 @@ webroot/
     └── docker-compose.yml
 ```
 
-Note about root directory and file architecture
-
-## Git
-
-Note about what to ignore in git repo, and which git server we use (beanstalk or github)
-
-## Drush
-
-Note about Drush
-
-## Composer
+## 2. Using composer to manage modules
 
 Note about composer
 
-## Hosting
+## 3. Using Drush to manage Config Manager and Cache Rebuild
 
-Talk about Pantheon
+Note about Drush
+
+## 4. Pushing into Host (Pantheon)
+
+Note about Pantheon
 
 ## Troubleshooting
 - If you use Mintty as a terminal emulator for Cygwin, you may have some issues when trying to ssh into docker containers. Prefered solution it to use default cmd for Cygwin or git bash if you prefer not to use Cygwin. See the discusion (here)[https://github.com/docker/docker/pull/22956]
