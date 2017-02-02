@@ -38,7 +38,7 @@ The following commands will:
 docker-compose exec --user 82 php sh
 composer create-project drupal-composer/drupal-project:8.x-dev /var/www/html --stability dev --no-interaction
 ```
-Navigate to http://localhost:8000/ and you should see the Drupal Installation page
+Navigate to [http://localhost:8000/] and you should see the Drupal Installation page
 
 ### 3. Architecture
 
