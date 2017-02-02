@@ -15,7 +15,6 @@ This covers Drupal 8 and development tools related to it.
 cd .../projects
 composer create-project drupal-composer/drupal-project:8.x-dev my-site --stability dev --no-interaction
 ```
-
 This will create a drupal site organized as per [drupal-project](https://github.com/drupal-composer/drupal-project) in the projects/my-site folder.
 
 2. Download the Docker setup from Origin Design Github account and store it into your project
