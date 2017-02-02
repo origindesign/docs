@@ -33,7 +33,9 @@ This should list all the Docker Container running. Make sure their states are al
 The following commands will:
 - Connect to the php docker container using ssh
 - Install Drupal 8 into webroot/origindrop/site/ folder, using composer from the [Drupal Composer project](https://github.com/drupal-composer/drupal-project)
+
 *Note that the PHP container has composer and drush pre-installed*
+
 ```shell
 docker-compose exec --user 82 php sh
 composer create-project drupal-composer/drupal-project:8.x-dev /var/www/html --stability dev --no-interaction
