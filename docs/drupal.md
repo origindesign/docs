@@ -10,17 +10,19 @@ This covers Drupal 8 and development tools related to it.
 
 ## Setting Up Drupal
 
-In your projects folder:
+1. Navigate to your folder where you store all your projects
 ```shell
-mkdir my-site
-cd my-site
-git clone https://github.com/drupal-composer/drupal-project.git
-mv drupal-project/* .
-rm -r drupal-project -y
+cd .../projects
+composer create-project drupal-composer/drupal-project:8.x-dev my-site --stability dev --no-interaction
 ```
 
-This will grab a composer template from [drupal-project](https://github.com/drupal-composer/drupal-project), install it into drupal-project folder, moving the necessary files into your my-site folder and delete the rest. 
+This will create a drupal site organized as per [drupal-project](https://github.com/drupal-composer/drupal-project) in the projects/my-site folder.
 
+2. Download the Docker setup from Origin Design Github account and store it into your project
+```shell
+cd my-site
+curl -o docker-compose.yml https://raw.githubusercontent.com/origindesign/origin-docker/master/docker-compose.yml
+```
 
 ## Architecture
 
