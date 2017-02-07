@@ -51,6 +51,7 @@ host: mariadb
 port: 3306
 ```
 - After the installation, enter the site information and you should get your fresh Drupal 8 Site.
+- At the time of this writing, docker has some permissions issues in the files directory with drupal 8.2.x version in the core/includes/files.inc. This can be solved by using drupal > 8.3.x (alpha at the time of this writing) and applying this [patch](https://www.drupal.org/node/944582)
 
 ### c. Architecture
 <pre>
