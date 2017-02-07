@@ -99,7 +99,9 @@ Note about composer
 
 ## 3. Using Drush to manage Config Manager and Cache Rebuild
 
-Note about Drush
+- Drush can be access normally after sshing into the php container `docker-compose exec php sh`, `cd var/www/html/web` and then `drush status`
+- Drush can be accessed through the docker-compose command and by specifiying the root directory `docker-compose exec php drush -r /var/www/html/web/ status`
+
 
 ## 4. Pushing into Host (Pantheon)
 
