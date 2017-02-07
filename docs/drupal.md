@@ -99,8 +99,24 @@ Note about composer
 
 ## 3. Using Drush to manage Config Manager and Cache Rebuild
 
-- Drush can be access normally after sshing into the php container `docker-compose exec php sh`, `cd var/www/html/web` and then `drush status`
-- Drush can be accessed through the docker-compose command and by specifiying the root directory `docker-compose exec php drush -r /var/www/html/web/ status`
+- Drush can be access normally after sshing into the php container:
+```
+docker-compose exec php sh
+cd var/www/html/web
+drush status
+```
+- Drush can aslo be accessed through the docker-compose command and by specifiying the root directory `docker-compose exec php drush -r /var/www/html/web/ status`
+- In order to simplify the command, you can create an alias in your .bashrc file like `alias ddrush='docker-compose exec php drush'` (I called mine "ddrush" for docker drush)
+- Then you'd need to create your drush aliases and copy it from your local machine to the php container drush directory:
+```
+cd ~/.drush
+docker cp pantheon.aliases.drushrc.php origindrop_php_1:/root/.drush/pantheon.aliases.drushrc.php
+```
+- Depending on the name you set for your aliases, you should be able to run drush from your local like these:
+```
+ddrush @local status 
+ddrush @pantheon.origindrop.dev status 
+```
 
 
 ## 4. Pushing into Host (Pantheon)
