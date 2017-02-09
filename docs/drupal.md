@@ -123,7 +123,7 @@ ddrush @pantheon.origindrop.dev status
 
 ## 4. Pushing into Host (Pantheon)
 
-Note about Pantheon
+- There might be some drush conflict when pushing from your local to pantheon directly. The recommended solution is to use the "per project drush" way which embed drush in the vendor directory through composer. By default it's added with the drupal-composer upstream. However, if it's not working, it might be necessary to use the global drush packaged in by Pantheon hosting. In order to do that, you can simply remove drush from your composer.json by doing `compose remove drush/drush`.
 
 ## Troubleshooting
 - If you use Mintty as a terminal emulator for Cygwin, you may have some issues when trying to ssh into docker containers. Prefered solution it to use default cmd for Cygwin or git bash if you prefer not to use Cygwin. See the discusion [here](https://github.com/docker/docker/pull/22956)
