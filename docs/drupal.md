@@ -15,6 +15,7 @@ This setup is done on windows, the main projects directory is as close as the C 
 ### a. Setting up docker containers
 
 The following commands will:
+
 - Navigate to the webroot directory
 - Download the docker setup from Origin Docker repository into your new project directory.
 - Install docker containers locally (a LEMP stack working with Nginx, Php 7, MariaDB, PhpMyAdmin and mailhog)
@@ -31,6 +32,7 @@ This should list all the Docker Container running. Make sure their states are al
 ### b. Installing Drupal
 
 The following commands will:
+
 - Connect to the php docker container using ssh
 - Install Drupal 8 into webroot/origindrop/site/ folder, using composer from the [Drupal Composer project](https://github.com/drupal-composer/drupal-project)
 
