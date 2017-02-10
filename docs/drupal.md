@@ -10,38 +10,36 @@ This covers Drupal 8 and development tools related to it.
 
 ## 1. Setting Up Drupal on Docker
 
-This setup is done on windows, the main projects directory is as close as the C folder to avoid path length limit to 260 characters on Windows. In the following steps, the projects folder is C:\webroot\ and the project name is called "Origin Drop".
+### a. Getting Drupal and Docker running
 
-### a. Setting up docker containers
+This setup is done on windows, the main projects directory is as close as the C folder to avoid path length limit to 260 characters on Windows. In the following steps, the projects folder is C:\webroot\ and the project name is called "Origin Drop".
 
 The following commands will:
 
 - Navigate to the webroot directory
+- Creating a Drupal 8 project into webroot/origindrop/ folder
 - Download the docker setup from Origin Docker repository into your new project directory.
 - Install docker containers locally (a LEMP stack working with Nginx, Php 7, MariaDB, PhpMyAdmin and mailhog)
 - Check everything is working fine
+
 ```shell
 cd /webroot
-git clone git@github.com:origindesign/origin-docker.git origindrop
-cd origindrop
+composer create-project drupal-composer/drupal-project:8.x-dev origindrop --stability dev --no-interaction
+```
+This may take a while as it will setup Drupal 8 using composer from the [Drupal Composer project](https://github.com/drupal-composer/drupal-project). Once it's done:
+
+```shell
+cd /origindrop
+curl https://raw.githubusercontent.com/origindesign/origin-docker/master/docker-compose.yml > docker-compose.yml
 docker-compose up -d
 docker-compose ps
 ```
-This should list all the Docker Container running. Make sure their states are all up.
+This downloads the docker-compose.yml file from origin repository and store it in your project. If you don't have curl setup, you can still download the file manually and place it in the root of the project.  The `docker-compose up -d` command creates and runs all the Docker containers necessary for Drupal to run. Note that the PHP container has Composer and Drush pre-installed. Finally, The `docker-compose ps` command should list all the Docker Container running. Make sure their states are all up.
 
 ### b. Installing Drupal
 
-The following commands will:
+If everything went well:
 
-- Connect to the php docker container using ssh
-- Install Drupal 8 into webroot/origindrop/site/ folder, using composer from the [Drupal Composer project](https://github.com/drupal-composer/drupal-project)
-
-*Note that the PHP container has composer and drush pre-installed*
-
-```shell
-docker-compose exec --user 82 php sh
-composer create-project drupal-composer/drupal-project:8.x-dev /var/www/html --stability dev --no-interaction
-```
 - Navigate to <http://localhost:8000> and you should see the Drupal Installation page
 - Navigate to <http://localhost:8001> and you should see PhpMyAdmin interface with an empty drupal database
 - From the install page, follow the classic Drupal installation step using the following credentials:
@@ -59,40 +57,40 @@ port: 3306
 <pre>
 webroot/
 └── origindrop/
-    ├── site/
-    |   ├── drush/
-    |   |   └── ...
-    |   ├── scripts/
-    |   |   └── ...
-    |   ├── vendor/
-    |   |   └── ...
-    |   ├── web/
-    |   |   ├── core/
-    |   |   ├── modules/
-    |   |   ├── profiles/
-    |   |   ├── sites/
-    |   |   ├── themes/
-    |   |   ├── .htaccess
-    |   |   ├── autoload.php
-    |   |   ├── index.php
-    |   |   ├── robots.txt
-    |   |   ├── update.php
-    |   |   ├── web.config
-    |   |   └── ...
-    |   ├── .gitignore
-    |   ├── .travis.yml
-    |   ├── composer.json
-    |   ├── composer.lock
-    |   ├── LICENCE
-    |   ├── phpunit.xml.dist
-    |   └── README.md
-    ├── docker-runtime
+    ├── docker-runtime/
     |   └── ...
-    └── docker-compose.yml
+    ├── drush/
+    |   └── ...
+    ├── scripts/
+    |   └── ...
+    ├── vendor/
+    |   └── ...
+    ├── web/
+    |   ├── core/
+    |   ├── modules/
+    |   ├── profiles/
+    |   ├── sites/
+    |   ├── themes/
+    |   ├── .htaccess
+    |   ├── autoload.php
+    |   ├── index.php
+    |   ├── robots.txt
+    |   ├── update.php
+    |   ├── web.config
+    |   └── ...
+    ├── .gitignore
+    ├── .travis.yml
+    ├── composer.json
+    ├── composer.lock
+    ├── docker-compose.yml
+    ├── LICENCE
+    ├── phpunit.xml.dist
+    └── README.md
 </pre>
 
 ### d. Stopping and Removing containers
 
+When you want to stop working on a project, type `docker-compose stop` from the root of the project, it will stop the containers.
 IMPORTANT: Do not use `docker-compose down` command because it will purge MariaDB volume. Instead use `docker-compose stop`. If you restart Docker you WILL NOT lose your MariaDB data. 
 
 ## 2. Using composer to manage modules
