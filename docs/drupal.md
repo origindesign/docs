@@ -17,10 +17,9 @@ This setup is done on windows, the main projects directory is as close as the C 
 The following commands will:
 
 - Navigate to the webroot directory
-- Creating a Drupal 8 project into webroot/origindrop/ folder
+- Create a Drupal 8 project into webroot/origindrop/ folder
 - Download the docker setup from Origin Docker repository into your new project directory.
 - Install docker containers locally (a LEMP stack working with Nginx, Php 7, MariaDB, PhpMyAdmin and mailhog)
-- Check everything is working fine
 
 ```shell
 cd /webroot
@@ -99,7 +98,7 @@ Note about composer
 
 ## 3. Using Drush to manage Config Manager and Cache Rebuild
 
-- Drush can be access normally after sshing into the php container:
+- Drush can be accessed normally after sshing into the php container:
 ```
 docker-compose exec php sh
 cd var/www/html/web
