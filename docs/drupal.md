@@ -21,12 +21,12 @@ The following commands will:
 - Download the docker setup from Origin Docker repository into your new project directory.
 - Install docker containers locally (a LEMP stack working with Nginx, Php 7, MariaDB, PhpMyAdmin and mailhog)
 ```shell
-$ cd /webroot
+$ cd .../webroot
 $ composer create-project drupal-composer/drupal-project:8.x-dev origindrop --stability dev --no-interaction
 ```
 This may take a while as it will setup Drupal 8 using composer from the [Drupal Composer project](https://github.com/drupal-composer/drupal-project). Once it's done:
 ```shell
-$ cd /origindrop
+$ cd origindrop
 $ curl https://raw.githubusercontent.com/origindesign/origin-docker/master/docker-compose.yml > docker-compose.yml
 $ docker-compose up -d
 $ docker-compose ps
