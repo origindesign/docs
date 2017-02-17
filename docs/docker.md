@@ -44,5 +44,5 @@ $ docker cp filename.ext name_of_php_container:/root/filename.ext
 
 - Importing a database into mariadb container
 ```
-$ docker exec - name_of_mariadb_container mysql -h mariadb -udrupal -pdrupal drupal --force < database_filename.sql.gz
+$ docker exec - name_of_mariadb_container mysql -h mariadb -udrupal -pdrupal drupal --force < database_filename.sql
 ```
