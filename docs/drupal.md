@@ -4,18 +4,15 @@ See [Origin Drupal 8 project](https://github.com/origindesign/origin-drupal-8) i
 
 ## Pattern Lab Starter Theme
 
-follow steps on [Pattern Lab Starter] (https://github.com/phase2/pattern-lab-starter)
+- follow steps on [Pattern Lab Starter](https://github.com/phase2/pattern-lab-starter)
 
-install patternlab extra depenencies
+**Install patternlab extra depenencies**
 ```
-cd webroot/themes/custom/*themename*/pattern-lab
+cd webroot/themes/custom/themename/pattern-lab
 composer require aleksip/plugin-data-transform pattern-lab/plugin-data-inheritance
 ```
 
-Fix component-libraries path issue on windows
+**Fix component-libraries path issue on windows**
 
-gulconfig.js
-change addToDrupalThemeFile to false
-
-*themename*.info.yml
-in component-libraries paths replace \ with /
+- edit gulconfig.js - *change addToDrupalThemeFile to false*
+- themename.info.yml - *in component-libraries paths replace \ with /*
