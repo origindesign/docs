@@ -1,7 +1,6 @@
 # Packagist
 
 ## Adding a module to Packagist
-
 - **Create new public repository on Github and commit module files into root of repository**
     - ex: [https://github.com/origindesign/origin_test](https://github.com/origindesign/origin_test)
     - see example composer.json
