@@ -3,16 +3,16 @@
 ## Adding a module to Packagist
 
 - **Create new public repository on Github and commit module files into root of repository**
-  - ex: [https://github.com/origindesign/origin_test](https://github.com/origindesign/origin_test)
-  - see example composer.json
+    - ex: [https://github.com/origindesign/origin_test](https://github.com/origindesign/origin_test)
+    - see example composer.json
 - **Submit module to Packagist**
-  - [https://packagist.org/packages/submit](https://packagist.org/packages/submit)
-  - ex:[https://packagist.org/packages/origindesign/origin_test](https://packagist.org/packages/origindesign/origin_test)
+    - [https://packagist.org/packages/submit](https://packagist.org/packages/submit)
+    - ex:[https://packagist.org/packages/origindesign/origin_test](https://packagist.org/packages/origindesign/origin_test)
 - **Link Github repositry to Packagist for auto updates when you push**
-  - Add Packagist as new service
-    - Github repo > Settings > Integrations and Services
-  - Link with API key and username (origindesign) from packagist
-    - Packagist > Account name > Profile > Show API token
+    - Add Packagist as new service
+        - Github repo > Settings > Integrations and Services
+    - Link with API key and username (origindesign) from packagist
+        - Packagist > Account name > Profile > Show API token
     
 ## Creating a new version of module
 - [https://packagist.org/about](https://packagist.org/about)
