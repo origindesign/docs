@@ -6,7 +6,7 @@
     - see example composer.json
 - **Submit module to Packagist**
     - [https://packagist.org/packages/submit](https://packagist.org/packages/submit)
-    - ex:[https://packagist.org/packages/origindesign/origin_test](https://packagist.org/packages/origindesign/origin_test)
+    - ex: [https://packagist.org/packages/origindesign/origin_test](https://packagist.org/packages/origindesign/origin_test)
 - **Link Github repositry to Packagist for auto updates when you push**
     - Add Packagist as new service
         - Github repo > Settings > Integrations and Services
