@@ -1,18 +1,4 @@
 # Drupal
 
-See [Origin Drupal 8 project](https://github.com/origindesign/origin-drupal-8) in order to set drupal with docker and composer.
+See [Origin Drop 8 project](https://github.com/origindesign/origin-drop-8)and follow read me instructions to setup a new Drupal site
 
-## Pattern Lab Starter Theme
-
-- follow steps on [Pattern Lab Starter](https://github.com/phase2/pattern-lab-starter)
-
-**Install patternlab extra depenencies**
-```
-cd webroot/themes/custom/themename/pattern-lab
-composer require aleksip/plugin-data-transform pattern-lab/plugin-data-inheritance
-```
-
-**Fix component-libraries path issue on windows**
-
-- edit gulconfig.js - *change addToDrupalThemeFile to false*
-- themename.info.yml - *in component-libraries paths replace \ with /*
