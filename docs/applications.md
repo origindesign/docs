@@ -9,9 +9,31 @@
 - [Download](https://www.jetbrains.com/phpstorm/download)
 - Credentials on keeweb
 
-## Cygwin
-- [Download](https://www.cygwin.com)
-
 ## Composer
 - [Download](https://getcomposer.org/download/)
 - Follow install instructions
+
+## Cygwin
+- [Download](https://www.cygwin.com)
+- Guide of useful packages
+curl  
+gcc-core  
+gcc-g++  
+git  
+grep  
+gzip  
+httpd  
+less  
+mintty  
+openssh  
+openssl  
+perl  
+php  
+python  
+rsync  
+ruby  
+tar  
+unzip  
+vim  
+wget  
+which  
