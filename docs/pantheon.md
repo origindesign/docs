@@ -7,6 +7,10 @@ cd /cgywin/c/webroot
 git clone ssh://codeserver.dev.{{siteID}}@codeserver.dev.{{siteID}}.drush.in:2222/~/repository.git destination-folder-name
 cd destination-folder-name
 ````
+- Run Composer to get all dependencies
+````
+composer update
+````
 - Start Docker and create folders
 ````
 docker-compose up -d
