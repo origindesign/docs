@@ -1,6 +1,6 @@
 # Pantheon
 
-## Pulling a site from pantheon
+## Pulling a site from Pantheon
 - Visit sites dashboard, dev environment tab, 'Connection Info' button, copy Git url
 ````
 cd /cgywin/c/webroot
@@ -38,3 +38,37 @@ exit
 ddrush sql-sync @live @local
 ````
 - Get sftp details from Live environment Connection Info and download drupal files using ftp program
+
+## Pushing a change to Pantheon
+- From the project root, pull files, update composer and import any potential config updates
+````
+git pull
+composer update
+ddrush config import
+````
+- Make all your local changes to files, if you have database changes, run a config export
+````
+ddrush cex
+````
+- Commit and push your changes
+````
+git add -A .
+git commit -m "Enter FreshDesk ticket number (FD ****) if one exists and briefly describe your changes"
+git push origin master
+````
+- Login to Circle CI and watch for build to pass
+- Login to Pantheon dashboard and pull changes from Dev to Test. If you have config updates or database updates, run drush commands
+````
+ddrush @test updb
+ddrush @test cim
+````
+- Test your changes to ensure everything is as expected
+- Pull changes from Test to Live. If you have config updates or database updates, run drush commands
+````
+ddrush @live updb
+ddrush @live cim
+````
+- If you imported config, ensure AdvVagg is switched back on
+- Configuration > Development > Performance > AdvVagg >
+Check 'Enable advanced aggregation'
+- Test your changes to ensure everything is as expected
