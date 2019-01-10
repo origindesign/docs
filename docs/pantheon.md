@@ -14,7 +14,7 @@ composer update
 - Start Docker and create folders
 ````
 docker-compose up -d
-docker-composer exec php sh
+docker-compose exec php sh
 mkdir ~/.drush
 mkdir ~/.ssh
 exit
