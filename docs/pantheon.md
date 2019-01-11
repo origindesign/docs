@@ -1,13 +1,13 @@
-# Pantheon
+# Workflow
 
-## Pulling a site from Pantheon
-- Visit sites dashboard, dev environment tab, 'Connection Info' button, copy Git url
+## Pulling a site to local
+- Login to GitHub, go to the repository page, click 'Clone or Download' and copy the git URL
 ````
 cd /cgywin/c/webroot
-git clone ssh://codeserver.dev.{{siteID}}@codeserver.dev.{{siteID}}.drush.in:2222/~/repository.git destination-folder-name
+git clone git@github.com:origindesign/repo-name.git destination-folder-name
 cd destination-folder-name
 ````
-- Run Composer to get all dependencies
+- From the project root, run Composer to get all dependencies
 ````
 composer update
 ````
@@ -39,8 +39,8 @@ ddrush sql-sync @live @local
 ````
 - Get sftp details from Live environment Connection Info and download drupal files using ftp program
 
-## Pushing a change to Pantheon
-- From the project root, pull files, update composer and import any potential config updates
+## Making local changes and pushing live
+- From the project root, pull file changes from git, update composer and import any potential config updates
 ````
 git pull
 composer update
