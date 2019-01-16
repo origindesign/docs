@@ -39,6 +39,12 @@ ddrush sql-sync @live @local
 ````
 - Get sftp details from Live environment Connection Info and download drupal files using ftp program
 
+- Add URL alias to hosts file so you can access from a web browser
+````
+127.0.0.1    site-name.docker.localhost
+127.0.0.1    pma.site-name.docker.localhost
+````
+
 ## Making local changes and pushing live
 - From the project root, pull file changes from git, update composer and import any potential config updates
 ````
