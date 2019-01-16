@@ -50,7 +50,7 @@ ddrush sql-sync @live @local
 ````
 git pull
 composer update
-ddrush config import
+ddrush cim
 ````
 - Make all your local changes to files, if you have database changes, run a config export
 ````
