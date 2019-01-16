@@ -45,6 +45,11 @@ ddrush sql-sync @live @local
 127.0.0.1    pma.site-name.docker.localhost
 ````
 
+- Clear cache to ensure a fresh start
+````
+ddrush @local cr
+````
+
 ## Making local changes and pushing live
 - From the project root, pull file changes from git, update composer and import any potential config updates
 ````
