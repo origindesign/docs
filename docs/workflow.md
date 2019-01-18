@@ -33,6 +33,10 @@ docker-compose exec php sh
 chmod 400 ~/.ssh/id_rsa
 exit
 ````
+- Copy the contents from below and save as /web/sites/default/settings.local.php
+````
+https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default/settings.local.php.txt
+````
 - Pull database from Pantheon
 ````
 ddrush sql-sync @live @local
