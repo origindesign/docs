@@ -54,12 +54,16 @@ ddrush sql-sync @live @local
 ddrush @local cr
 ````
 
-## Making local changes and pushing live
+## Making local changes, testing and pushing live
 - From the project root, pull file changes from git, update composer and import any potential config updates
 ````
 git pull
 composer update
 ddrush cim
+````
+- Create a branch for your working code
+````
+git checkout -b branch-name
 ````
 - Make all your local changes to files, if you have database changes, run a config export
 ````
@@ -69,6 +73,15 @@ ddrush cex
 ````
 git add -A .
 git commit -m "Enter FreshDesk ticket number (FD ****) if one exists and briefly describe your changes"
+git push origin branch-name
+````
+- Login to Circle CI and watch for build to pass
+- Login to Pantheon dashboard, visit you sites Multidev tab, click on branch-name
+- Click on 'Visit branch-name' to view your site and test your code
+- Once all code changes are tested and approved, from your local, merge the code into master branch
+````
+git checkout master
+git merge branch-name
 git push origin master
 ````
 - Login to Circle CI and watch for build to pass
