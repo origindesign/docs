@@ -2,6 +2,7 @@
 
 ## Required
 - Docker (mac) or Docker for Windows
+- Docker Compose (https://docs.docker.com/compose/install/)
 - Composer
 - Gulp
 - Yarn
