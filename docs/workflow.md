@@ -49,6 +49,12 @@ ddrush sql-sync @live @local
 127.0.0.1    pma.site-name.docker.localhost
 ````
 
+- Install dev pre-processing dependencies from them
+````
+cd web/themes/custom/origin
+yarn install
+gulp watch
+````
 - Clear cache to ensure a fresh start
 ````
 ddrush @local cr
