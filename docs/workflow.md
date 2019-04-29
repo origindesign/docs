@@ -7,9 +7,9 @@ cd /cgywin/c/webroot
 git clone git@github.com:origindesign/repo-name.git destination-folder-name
 cd destination-folder-name
 ````
-- From the project root, run Composer to get all dependencies
+- From the project root, get all dependencies with Composer
 ````
-composer update
+composer install
 ````
 - Start Docker and create folders
 ````
@@ -49,7 +49,7 @@ ddrush sql-sync @live @local
 127.0.0.1    pma.site-name.docker.localhost
 ````
 
-- Install dev pre-processing dependencies from them
+- Install dev pre-processing dependencies from theme
 ````
 cd web/themes/custom/origin
 yarn install
@@ -58,6 +58,10 @@ gulp watch
 - Clear cache to ensure a fresh start
 ````
 ddrush @local cr
+````
+- Visit site in browser
+````
+http://site-name.docker.localhost
 ````
 
 ## Making local changes, testing and pushing live
