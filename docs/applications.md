@@ -9,7 +9,12 @@
 - Node.js
 
 Notes:
+- Cygwin is our preferred terminal, feel free to use your own
 - Install Composer after Cygwin and map Cygwin's php
+- Update $PATH in environment variables and add
+  - C:\cygwin64\bin
+  - %USERPROFILE%\AppData\Local\Yarn\bin
+  - %USERPROFILE%\AppData\Roaming\npm
 
 ## Cygwin packages
 Run install as many times as you wish to add extra packages
