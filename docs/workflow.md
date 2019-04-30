@@ -3,9 +3,9 @@
 ## Pulling a site to local
 - Login to GitHub, go to the repository page, click 'Clone or Download' and copy the git URL
 ````
-cd /cgywin/c/webroot
-git clone git@github.com:origindesign/repo-name.git destination-folder-name
-cd destination-folder-name
+cd c:/webroot
+git clone git@github.com:origindesign/<repo-name>.git
+cd <project-folder-name>
 ````
 - From the project root, get all dependencies with Composer
 ````
@@ -22,13 +22,13 @@ exit
 - Clone alias file and ssh key into container
 ````
 cd ~/.drush
-docker cp alias-file-name.php container_name_php:/root/.drush
+docker cp <alias-file-name>.php <container_name>_php:/root/.drush
 cd ~/.ssh
-docker cp id_rsa container_name_php:/root/.ssh
+docker cp id_rsa <container_name>_php:/root/.ssh
 ````
 - Update permissions for ssh key
 ````
-cd /cgywin/c/webroot/destination-folder-name
+cd c:/webroot/<project-folder-name>
 docker-compose exec php sh
 chmod 400 ~/.ssh/id_rsa
 exit
@@ -45,8 +45,8 @@ ddrush sql-sync @live @local
 
 - Add URL alias to hosts file so you can access from a web browser
 ````
-127.0.0.1    site-name.docker.localhost
-127.0.0.1    pma.site-name.docker.localhost
+127.0.0.1    <site-name>.docker.localhost
+127.0.0.1    pma.<site-name>.docker.localhost
 ````
 
 - Install dev pre-processing dependencies from theme
@@ -61,7 +61,7 @@ ddrush @local cr
 ````
 - Visit site in browser
 ````
-http://site-name.docker.localhost
+http://<site-name>.docker.localhost
 ````
 
 ## Making local changes, testing and pushing live
@@ -73,7 +73,7 @@ ddrush cim
 ````
 - Create a branch for your working code
 ````
-git checkout -b branch-name
+git checkout -b <branch-name>
 ````
 - Make all your local changes to files, if you have database changes, run a config export
 ````
@@ -83,15 +83,15 @@ ddrush cex
 ````
 git add -A .
 git commit -m "Enter FreshDesk ticket number (FD ****) if one exists and briefly describe your changes"
-git push origin branch-name
+git push origin <branch-name>
 ````
 - Login to Circle CI and watch for build to pass
 - Login to Pantheon dashboard, visit you sites Multidev tab, click on branch-name
-- Click on 'Visit branch-name' to view your site and test your code
+- Click on 'Visit <branch-name>' to view your site and test your code
 - Once all code changes are tested and approved, from your local, merge the code into master branch
 ````
 git checkout master
-git merge branch-name
+git merge <branch-name>
 git push origin master
 ````
 - Login to Circle CI and watch for build to pass

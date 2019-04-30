@@ -2,33 +2,39 @@
 
 ## Required
 - Docker (mac) or Docker for Windows
-- Docker Compose (https://docs.docker.com/compose/install/)
-- Composer
+- Cygwin (https://www.cygwin.com)
+- Composer (https://getcomposer.org/download/)
+- Yarn (https://yarnpkg.com/en/docs/install)
 - Gulp
-- Yarn
+- Node.js
 
-## Cygwin packages for reference only
-- [Download](https://www.cygwin.com)
-- Run install as many times as you wish to add extra packages
-- Guide of useful packages  
-curl  
-gcc-core  
-gcc-g++  
-git  
-grep  
-gzip  
-httpd  
-less  
-mintty  
-openssh  
-openssl  
-perl  
-php  
-python  
-rsync  
-ruby  
-tar  
-unzip  
-vim  
-wget  
-which  
+Notes:
+- Install Composer after Cygwin and map Cygwin's php
+
+## Cygwin packages
+Run install as many times as you wish to add extra packages
+- gcc-core  
+- gcc-g++  
+- git  
+- grep  
+- gzip  
+- httpd  
+- less  
+- mintty  
+- openssh  
+- openssl  
+- perl  
+- php  
+- php-curl
+- php-json
+- php-phar
+- php-mbstring
+- php-zlib 
+- python  
+- rsync  
+- ruby  
+- tar  
+- unzip  
+- vim  
+- wget  
+- which  
