@@ -13,6 +13,7 @@ Notes:
 - Install Composer after Cygwin and map Cygwin's php
 - Update $PATH in environment variables and add
   - C:\cygwin64\bin
+  - C:\Program Files\nodejs
   - %USERPROFILE%\AppData\Local\Yarn\bin
   - %USERPROFILE%\AppData\Roaming\npm
 
