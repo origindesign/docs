@@ -33,9 +33,11 @@ docker-compose exec php sh
 chmod 400 ~/.ssh/id_rsa
 exit
 ````
-- Copy the contents from below and save as /web/sites/default/settings.local.php
+- Copy the contents from [https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default/settings.local.php.txt](https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default/settings.local.php.txt) and save as /web/sites/default/settings.local.php
 ````
-https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default/settings.local.php.txt
+cd web/sites/default
+wget https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default/settings.local.php.txt 
+cp settings.local.php.txt settings.local.php 
 ````
 - Pull database from Pantheon
 - Ensure shortcuts are added to .bashrc [See Here](https://origindocs.readthedocs.io/en/latest/docker/) 
