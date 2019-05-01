@@ -2,10 +2,10 @@
 
 ## Required
 - Docker (mac) or Docker for Windows
-- Composer (https://getcomposer.org/download/)
-- Node.js (https://nodejs.org/en/download/)
-- Yarn (https://yarnpkg.com/en/docs/install)
-- Gulp (https://gulpjs.com/docs/en/getting-started/quick-start)
+- Composer [https://getcomposer.org/download](https://getcomposer.org/download)
+- Node.js [https://nodejs.org/en/download](https://nodejs.org/en/download)
+- Yarn [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
+- Gulp [https://gulpjs.com/docs/en/getting-started/quick-start](https://gulpjs.com/docs/en/getting-started/quick-start)
 
 ## Suggested
 - Cygwin (https://www.cygwin.com)
