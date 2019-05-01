@@ -60,7 +60,7 @@ ddrush @local cr
 ````
 - Visit site in browser
 ````
-http://<site-name>.docker.localhost
+http://<site-name>.docker.localhost:8000
 ````
 
 ## Making local changes, testing and pushing live
