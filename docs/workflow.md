@@ -1,6 +1,7 @@
 # Workflow
 
 ## Pulling a site to local
+- Ensure shortcuts are added to .bashrc [See Here](https://origindocs.readthedocs.io/en/latest/docker/) 
 - Login to GitHub, go to the repository page, click 'Clone or Download' and copy the git URL
 ````
 cd c:/webroot
@@ -40,11 +41,10 @@ wget https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default
 cp settings.local.php.txt settings.local.php 
 ````
 - Pull database from Pantheon
-- Ensure shortcuts are added to .bashrc [See Here](https://origindocs.readthedocs.io/en/latest/docker/) 
 ````
 ddrush sql-sync @live @local
 ````
-- Get sftp details from Live environment Connection Info and download drupal files using ftp program
+- Get sftp details from Live environment Connection Info and download drupal files folder using ftp program
 
 - Add URL alias to hosts file so you can access from a web browser
 ````
