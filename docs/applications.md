@@ -2,13 +2,13 @@
 
 ## Required
 - Docker (mac) or Docker for Windows
-- Cygwin (https://www.cygwin.com)
 - Composer (https://getcomposer.org/download/)
 - Node.js (https://nodejs.org/en/download/)
 - Yarn (https://yarnpkg.com/en/docs/install)
 - Gulp (https://gulpjs.com/docs/en/getting-started/quick-start)
 
-Notes:
+## Suggested
+- Cygwin (https://www.cygwin.com)
 - Cygwin is our preferred terminal, feel free to use your own
 - Install Composer after Cygwin and map Cygwin's php
 - Update $PATH in environment variables and add
@@ -19,6 +19,7 @@ Notes:
 
 ## Cygwin packages
 Run install as many times as you wish to add extra packages
+
 - gcc-core  
 - gcc-g++  
 - git  
