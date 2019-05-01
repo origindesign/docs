@@ -4,9 +4,9 @@
 - Docker (mac) or Docker for Windows
 - Cygwin (https://www.cygwin.com)
 - Composer (https://getcomposer.org/download/)
+- Node.js (https://nodejs.org/en/download/)
 - Yarn (https://yarnpkg.com/en/docs/install)
-- Gulp
-- Node.js
+- Gulp (https://gulpjs.com/docs/en/getting-started/quick-start)
 
 Notes:
 - Cygwin is our preferred terminal, feel free to use your own
@@ -26,7 +26,10 @@ Run install as many times as you wish to add extra packages
 - gzip  
 - httpd  
 - less  
-- mintty  
+- mintty
+- mingw64-x86_64-gcc-core
+- mingw64-x86_64-gcc-g++  
+- make
 - openssh  
 - openssl  
 - perl  
