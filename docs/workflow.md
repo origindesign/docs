@@ -41,7 +41,8 @@ ddrush sql-sync @live @local
 ````
 - Get sftp details from Live environment Connection Info and download drupal files folder using ftp program
 
-- Add URL alias to hosts file so you can access from a web browser
+- Add URL alias to windows hosts file so you can access from a web browser
+- C:\Windows\System32\drivers\etc\hosts
 ````
 127.0.0.1    <site-name>.docker.localhost
 127.0.0.1    pma.<site-name>.docker.localhost
