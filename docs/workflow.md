@@ -12,7 +12,7 @@ cd <project-folder-name>
 ````
 composer install
 ````
-- Start Docker and create folders
+- Start Docker and create folders within docker container
 ````
 docker-compose up -d
 docker-compose exec php sh
