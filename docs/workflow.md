@@ -38,6 +38,7 @@ exit
 https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default/settings.local.php.txt
 ````
 - Pull database from Pantheon
+- Ensure shortcuts are added to .bashrc [See Here](https://origindocs.readthedocs.io/en/latest/docker/) 
 ````
 ddrush sql-sync @live @local
 ````

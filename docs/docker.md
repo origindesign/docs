@@ -5,7 +5,7 @@
 - Create a folder 'c://webroot' to store all local websites. This is important to avoid issues with paths that get too long
 
 
-## Adding shortcuts to user path
+## Adding shortcuts to .bashrc
 ````
 alias ddrush='docker-compose exec php drush'
 alias dcomposer='docker-compose exec php composer'
