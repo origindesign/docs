@@ -1,7 +1,7 @@
 # Workflow
+- Ensure shortcuts are added to .bashrc [See Here](https://origindocs.readthedocs.io/en/latest/docker/) 
 
 ## Pulling a site to local
-- Ensure shortcuts are added to .bashrc [See Here](https://origindocs.readthedocs.io/en/latest/docker/) 
 - Login to GitHub, go to the repository page, click 'Clone or Download' and copy the git URL
 ````
 cd c:/webroot
