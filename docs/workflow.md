@@ -35,11 +35,6 @@ chmod 400 ~/.ssh/id_rsa
 exit
 ````
 - Copy the contents from [https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default/settings.local.php.txt](https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default/settings.local.php.txt) and save as /web/sites/default/settings.local.php
-````
-cd web/sites/default
-wget https://github.com/origindesign/origin-drop-8/blob/master/web/sites/default/settings.local.php.txt 
-cp settings.local.php.txt settings.local.php 
-````
 - Pull database from Pantheon
 ````
 ddrush sql-sync @live @local
