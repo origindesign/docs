@@ -12,6 +12,18 @@ cd <project-folder-name>
 ````
 composer install
 ````
+- To avoid potential drush sql-sync issues, delete drush, then run composer install from inside the container to re-install
+````
+rm -rf vendor/drush
+rm -rf vendor/bin/drush*
+
+dcomposer install
+-- or
+docker-composer exec php sh
+composer install
+exit
+````
+
 - Start Docker and create folders within docker container
 ````
 docker-compose up -d
@@ -38,6 +50,10 @@ exit
 - Pull database from Pantheon
 ````
 ddrush sql-sync @live @local
+-- or
+docker-compose exec php sh
+drush sql-sync @live @local
+exit
 ````
 - Get sftp details from Live environment Connection Info and download drupal files folder using ftp program
 
