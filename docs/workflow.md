@@ -80,11 +80,16 @@ http://<site-name>.docker.localhost:8000
 ````
 
 ## Making local changes, testing and pushing live
-- From the project root, pull file changes from git, update composer and import any potential config updates
+- From the project root, pull file changes from git, update dependencies with composer and import any potential config updates
 ````
 git pull
-composer update
+dcomposer update
 ddrush cim
+-- or
+docker-compose exec php sh
+composer update
+drush cim
+exit
 ````
 - Create a branch for your working code
 ````
@@ -93,6 +98,10 @@ git checkout -b <branch-name>
 - Make all your local changes to files, if you have database changes, run a config export
 ````
 ddrush cex
+-- or
+docker-compose exec php sh
+drush cex
+exit
 ````
 - Commit and push your changes
 ````
@@ -100,7 +109,8 @@ git add -A .
 git commit -m "Enter FreshDesk ticket number (FD ****) if one exists and briefly describe your changes"
 git push origin <branch-name>
 ````
-- Login to Circle CI and watch for build to pass
+- Visit [https://circleci.com](https://circleci.com) and login with GitHub
+- Visit https://circleci.com/gh/origindesign/<git-repo-name> and watch for build to pass
 - Login to Pantheon dashboard, visit you sites Multidev tab, click on branch-name
 - Click on 'Visit <branch-name>' to view your site and test your code
 - Once all code changes are tested and approved, from your local, merge the code into master branch
@@ -109,7 +119,7 @@ git checkout master
 git merge <branch-name>
 git push origin master
 ````
-- Login to Circle CI and watch for build to pass
+- Visit Circle CI and watch for build to pass
 - Login to Pantheon dashboard and pull changes from Dev to Test. If you have config updates or database updates, run drush commands
 ````
 ddrush @test updb
