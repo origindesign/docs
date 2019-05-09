@@ -1,5 +1,5 @@
 # Workflow
-- Ensure shortcuts are added to .bashrc [See Here](https://origindocs.readthedocs.io/en/latest/docker/) 
+- Ensure shortcuts are added to ~/.bashrc [See Here](https://origindocs.readthedocs.io/en/latest/docker/) 
 - Edit ~/.gitconfig
 ````
 [user]
