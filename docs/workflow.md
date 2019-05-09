@@ -43,7 +43,7 @@ exit
 - Clone alias file and ssh key into container
 ````
 cd <location-of-alias-file>
-docker cp <alias-file-name>.php <container_name>_php:/root/.drush
+docker cp <alias-file-name> <container_name>_php:/root/.drush
 cd ~/.ssh
 docker cp id_rsa <container_name>_php:/root/.ssh
 ````
