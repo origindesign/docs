@@ -1,4 +1,5 @@
 # Workflow
+- Instead of running drush commands through alias files, Terminus can be used with remote:drush [See here](https://origindocs.readthedocs.io/en/latest/terminus)
 - Ensure shortcuts are added to ~/.bashrc [See Here](https://origindocs.readthedocs.io/en/latest/docker/) 
 - Edit ~/.gitconfig
 ````
@@ -58,10 +59,6 @@ exit
 - Pull database from Pantheon
 ````
 ddrush sql-sync @live @local
--- or
-docker-compose exec php sh
-drush sql-sync @live @local
-exit
 ````
 - Get sftp details from Live environment Connection Info and download drupal files folder using ftp program
 
@@ -92,12 +89,7 @@ http://<site-name>.docker.localhost:8000
 ````
 git pull
 dcomposer update
-ddrush cim
--- or
-docker-compose exec php sh
-composer update
-drush cim
-exit
+ddrush @local cim
 ````
 - Create a branch for your working code
 ````
@@ -105,11 +97,7 @@ git checkout -b <branch-name>
 ````
 - Make all your local changes to files, if you have database changes, run a config export
 ````
-ddrush cex
--- or
-docker-compose exec php sh
-drush cex
-exit
+ddrush @local cex
 ````
 - Commit and push your changes
 ````
@@ -130,16 +118,17 @@ git push origin master
 - Visit Circle CI and watch for build to pass
 - Login to Pantheon dashboard and pull changes from Dev to Test. If you have config updates or database updates, run drush commands
 ````
-ddrush @test updb
-ddrush @test cim
+ddrush @test updb && ddrush @test cim
 ````
 - Test your changes to ensure everything is as expected
 - Pull changes from Test to Live. If you have config updates or database updates, run drush commands
 ````
-ddrush @live updb
-ddrush @live cim
+ddrush @live updb && ddrush @live cim
 ````
 - If you imported config, ensure AdvVagg is switched back on
 - Configuration > Development > Performance > AdvVagg >
-Check 'Enable advanced aggregation'
+Check 'Enable advanced aggregation' or
+````
+ddrush @live cset advagg.settings enabled 1 -y
+````
 - Test your changes to ensure everything is as expected

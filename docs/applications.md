@@ -6,6 +6,7 @@
 - Node.js [https://nodejs.org/en/download](https://nodejs.org/en/download)
 - Yarn [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
 - Gulp [https://gulpjs.com/docs/en/getting-started/quick-start](https://gulpjs.com/docs/en/getting-started/quick-start)
+- Terminus [https://pantheon.io/docs/terminus/install/] (https://pantheon.io/docs/terminus/install/)
 
 ## Suggested
 - Cygwin (https://www.cygwin.com)

@@ -11,6 +11,15 @@ alias ddrush='docker-compose exec php drush'
 alias dcomposer='docker-compose exec php composer'
 alias dc='docker-compose'
 ````
+If for any reason these shortcuts cannot be created, drush commands can be run directly in the container. Example:
+````
+docker-compose exec php sh
+composer update
+drush sql-sync @test @local
+drush @local updb
+drush @live cim
+exit
+````
 
 ## List of useful docker commands
 
