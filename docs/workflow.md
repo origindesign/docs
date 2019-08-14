@@ -85,11 +85,11 @@ http://<site-name>.docker.localhost:8000
 ````
 
 ## Making local changes, testing and pushing live
-- From the project root, pull file changes from git, update dependencies with composer and import any potential config updates
+- From the project root, pull file changes from git, install any new dependencies with composer and sync the database with live. If there is any issue syncing the live database, within the Pantheon dashboard clone it to dev or test and sync from there
 ````
 git pull
-dcomposer update
-ddrush @local cim
+dcomposer install
+ddrush sql-sync @live @local
 ````
 - Create a branch for your working code
 ````
@@ -99,7 +99,7 @@ git checkout -b <branch-name>
 ````
 ddrush @local cex
 ````
-- Commit and push your changes
+- Commit and push your changes with a descriptive comment
 ````
 git add -A .
 git commit -m "Enter FreshDesk ticket number (FD ****) if one exists and briefly describe your changes"
