@@ -127,8 +127,5 @@ ddrush @live updb && ddrush @live cim
 ````
 - If you imported config, ensure AdvVagg is switched back on
 - Configuration > Development > Performance > AdvVagg >
-Check 'Enable advanced aggregation' or
-````
-ddrush @live cset advagg.settings enabled 1 -y
-````
+Check 'Enable advanced aggregation' or simply Clear Cache from within the Pantheon Dashboard and this will fire a Quicksilver script to turn this back on with 'drush cset advagg.settings enabled 1 -y'
 - Test your changes to ensure everything is as expected
