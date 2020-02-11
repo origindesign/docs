@@ -120,13 +120,11 @@ git push origin <branch-name>
 - Review Multidev site to confirm all changes are functioning as expected
 - Once approved, visit Pull Request on GitHub and press 'Merge pull request'
 - Update local checkout with changes
-
- ````
+````
  git pull
  dcomposer install
  ddrush @local cim
- ````
- 
+````
 - Visit Circle CI and watch for PR build to pass
 - Login to Pantheon dashboard and pull changes from Dev to Test. If you have config updates or database updates, run drush commands
 ````
