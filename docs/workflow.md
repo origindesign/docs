@@ -84,8 +84,8 @@ ddrush @local cr
 http://<site-name>.docker.localhost:8000
 ````
 
-## Making local changes, testing and pushing live
-- From the project root, pull file changes from git, install any new dependencies with composer and sync the database with live. If there is any issue syncing the live database, within the Pantheon dashboard clone it to dev or test and sync from there
+## Making local changes, testing and creating a Pull Request
+- From the project root, pull any file changes from git, install any new dependencies with composer and sync the database with live. If there are any drush related issues syncing the live database, within the Pantheon dashboard clone it to dev or test and sync from there
 ````
 git pull
 dcomposer install
@@ -99,23 +99,33 @@ git checkout -b <branch-name>
 ````
 ddrush @local cex
 ````
-- Commit and push your changes with a descriptive comment
+- Commit and push your changes noting the FreshDesk ticket number if one exists and a short descriptive comment
 ````
 git add -A .
-git commit -m "Enter FreshDesk ticket number (FD ****) if one exists and briefly describe your changes"
+git commit -m "FD **** - Brief description of changes made"
 git push origin <branch-name>
 ````
 - Visit [https://circleci.com](https://circleci.com) and login with GitHub
-- Visit https://circleci.com/gh/origindesign/<git-repo-name> and watch for build to pass
-- Login to Pantheon dashboard, visit you sites Multidev tab, click on branch-name
-- Click on 'Visit <branch-name>' to view your site and test your code
-- Once all code changes are tested and approved, from your local, merge the code into master branch
-````
-git checkout master
-git merge <branch-name>
-git push origin master
-````
-- Visit Circle CI and watch for build to pass
+- Visit https://circleci.com/gh/origindesign/ <git-repo-name> and watch for build to pass
+- Login to Pantheon dashboard, visit the sites Multidev tab and click on <branch-name>
+- Click on 'Visit <branch-name>' to view your site and complete all relevant testing
+- Once all code changes are tested create a new Pull Request
+  - Visit https://github.com/origindesign/ <git-repo-name>
+  - Click 'Branches' tab and next to <branch-name> click 'New pull request'
+  - Click the settings icon besides 'Assignees' and assign 'origindesign'
+  - Enter a comment and press 'Create pull request'
+
+## Reviewing and approving Pull Request by senior developer
+- Visit https://github.com/origindesign/ <git-repo-name> to review all code changes within the Pull Request
+- Review Multidev site to confirm all changes are functioning as expected
+- Once approved, visit Pull Request on GitHub and press 'Merge pull request'
+- Update local checkout with changes
+ ````
+ git pull
+ dcomposer install
+ ddrush @local cim
+ ````
+- Visit Circle CI and watch for PR build to pass
 - Login to Pantheon dashboard and pull changes from Dev to Test. If you have config updates or database updates, run drush commands
 ````
 ddrush @test updb && ddrush @test cim
@@ -125,7 +135,7 @@ ddrush @test updb && ddrush @test cim
 ````
 ddrush @live updb && ddrush @live cim
 ````
-- If you imported config, ensure AdvVagg is switched back on
+- If you imported config, ensure AdVagg is switched back on
 - Configuration > Development > Performance > AdvVagg >
 Check 'Enable advanced aggregation' or simply Clear Cache from within the Pantheon Dashboard and this will fire a Quicksilver script to turn this back on with 'drush cset advagg.settings enabled 1 -y'
 - Test your changes to ensure everything is as expected
