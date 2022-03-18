@@ -2,6 +2,7 @@
 
 ## Required
 - Docker (mac) or Docker for Windows
+- Lando [https://lando.dev/](https://lando.dev/)
 - Composer [https://getcomposer.org/download](https://getcomposer.org/download)
 - Node.js [https://nodejs.org/en/download](https://nodejs.org/en/download)
 - Yarn [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
