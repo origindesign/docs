@@ -1,6 +1,7 @@
 # Cygwin
 
  [Cygwin](https://www.cygwin.com) is our preferred terminal, feel free to use your own
+
 - Install Composer after Cygwin and map Cygwin's php
 - Update $PATH in environment variables and add
   - C:\cygwin64\bin
@@ -10,6 +11,7 @@
 
 ## Cygwin packages
 Run install as many times as you wish to add extra packages
+
 - gcc-core  
 - gcc-g++  
 - git  
