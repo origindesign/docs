@@ -1,12 +1,7 @@
 # Workflow
-- Edit ~/.gitconfig
-````
-[user]
-	name = <Firstname Lastname>
-	email = <email@domain.com>
-[core]
-	autocrlf = true
-````
+
+## Overview
+Our sites are generally hosted with Pantheon using an external GitHub repository. When changes are pushed to the repo, Circle CI is used to run a series of testing steps before pushing an artifact to the Pantheon repository.
 
 ## Setting up a new site from codebase
 
