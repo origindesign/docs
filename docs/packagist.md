@@ -3,7 +3,7 @@
 ## Adding a module to Packagist
 - **Create new public repository on Github and commit module files into root of repository**
     - ex: [https://github.com/origindesign/origin_test](https://github.com/origindesign/origin_test)
-    - see example composer.json
+    - see example [composer.json](https://github.com/origindesign/origin_test/blob/master/composer.json)
 - **Submit module to Packagist**
     - [https://packagist.org/packages/submit](https://packagist.org/packages/submit)
     - ex: [https://packagist.org/packages/origindesign/origin_test](https://packagist.org/packages/origindesign/origin_test)
