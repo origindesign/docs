@@ -14,7 +14,7 @@ cd c:/webroot
 git clone git@github.com:origindesign/<repo-name>.git
 cd <repo-name>
 ````
-- Start the project using lando, which will run a composer install
+- Start the project using Lando, which will run a composer install
 ````
 lando start
 ````
@@ -29,7 +29,7 @@ lando pull
 - Install dev pre-processing dependencies from theme
 ````
 cd web/themes/custom/origin
-yarn install
+npm install
 npm start
 ````
 - Clear cache to ensure a fresh start
@@ -63,17 +63,17 @@ git commit -m "FD **** - Brief description of changes made"
 git push origin <branch-name>
 ````
 - Visit [https://circleci.com](https://circleci.com) and login with GitHub
-- Visit https://circleci.com/gh/origindesign/<git-repo-name> and watch for build to pass
+- Visit https://circleci.com/gh/origindesign/ <git-repo-name> and watch for build to pass
 - Login to Pantheon dashboard, visit the sites Multidev tab and click on <branch-name>
 - Click on 'Visit <branch-name>' to view your site and complete all relevant testing
 - Once all code changes are tested, create a new Pull Request
-  - Visit https://github.com/origindesign/<git-repo-name>
+  - Visit https://github.com/origindesign/ <git-repo-name>
   - Click 'Branches' tab and next to <branch-name> click 'New pull request'
   - Click the settings icon besides 'Assignees' and assign 'origindesign'
   - Enter a comment and press 'Create pull request'
 
 ## Reviewing and approving Pull Request by senior developer
-- Visit https://github.com/origindesign/<git-repo-name> to review all code changes within the Pull Request
+- Visit https://github.com/origindesign/ <git-repo-name> to review all code changes within the Pull Request
 - Review Multidev site to confirm all changes are functioning as expected
 - Once approved, visit Pull Request on GitHub and press 'Merge pull request'
 - Update local checkout with changes
