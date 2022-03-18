@@ -1,7 +1,9 @@
 # Workflow
 
 ## Overview
-Our sites are generally hosted with Pantheon using an external GitHub repository. When changes are pushed to the repo, Circle CI is used to run a series of testing steps before pushing an artifact to the Pantheon repository.
+Our Drupal sites are generally hosted with Pantheon using an external GitHub repository. When changes are pushed to the repo, Circle CI is used to run a series of testing steps before pushing an artifact to the Pantheon repository. 
+
+Each repository has it's own Read Me file outlining any specifics to that website.
 
 ## Setting up a new site from codebase
 

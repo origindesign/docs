@@ -4,6 +4,7 @@
 - GitHub - [https://github.com/origindesign](https://github.com/origindesign)
 - Circle CI - [https://app.circleci.com/pipelines/github/origindesign](https://app.circleci.com/pipelines/github/origindesign)
 - Pantheon - [https://dashboard.pantheon.io/](https://dashboard.pantheon.io/)
+- Netlify - [https://app.netlify.com/teams/origindesign/overview](https://app.netlify.com/teams/origindesign/overview)
 
 # Applications
 - [Docker (mac)](https://www.docker.com/) or [Docker for Windows](https://docs.docker.com/desktop/windows/install/)
