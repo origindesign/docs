@@ -87,13 +87,13 @@ git push origin [branch-name]
 - Visit Circle CI and watch for PR build to pass
 - Login to Pantheon dashboard and push changes from Dev to Test. If you have config or database updates, use terminus to run drush commands
 ````
-lando terminus remote:drush [site-name].test -- updb
-lando terminus remote:drush [site-name].test -- cim
+lando terminus remote:drush -- [site-name].test updb
+lando terminus remote:drush -- [site-name].test cim
 ````
 - Test your changes to ensure everything is as expected
 - Push changes from Test to Live. If you have config or database updates, run drush commands
 ````
-lando terminus remote:drush [site-name].live -- updb
-lando terminus remote:drush [site-name].live -- cim
+lando terminus remote:drush -- [site-name].live updb
+lando terminus remote:drush -- [site-name].live cim
 ````
 - Test your changes to ensure everything is as expected
