@@ -7,7 +7,7 @@ Each repository has it's own Read Me file outlining any specifics to that websit
 
 ## Setting up a new site from codebase
 
-See [Origin Drop 10 project](https://github.com/origindesign/origin-drop-10) and follow read me instructions to setup a new Drupal site.
+See [Origin Drop 10 project](https://github.com/origindesign/origin-drop-10) and follow read me instructions to setup a new Drupal site
 
 ## Pulling a site to local
 - Login to GitHub, go to the repository page, click 'Clone or Download' and copy the git URL
