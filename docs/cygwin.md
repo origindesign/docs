@@ -25,6 +25,7 @@ Run install as many times as you wish to add extra packages
  - make
  - openssh  
  - openssl  
+ - patch
  - perl  
  - php  
  - php-curl
